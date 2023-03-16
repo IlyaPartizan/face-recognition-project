@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <style>
+      .leftimg {
+       align:bottom; /* Выравнивание по левому краю */
+       margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+      }
+    </style>
+  </head>
+  <body>
+    {% for user in users %}
+      <p><image src={{user[3]}} width='100px' height='100px' class='leftimg'></image>
+      {{ user[0] }} {{ user[1] }} {{ user[2] }} </p>
+    {% endfor %}
+  </body>
+</html>

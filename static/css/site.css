@@ -1,0 +1,15 @@
+/*Карточки проходящих*/
+.card_list {
+    width: 100%;     /* ширина, которая вам нужна */
+    height: 550px;    /* высота, которая вам нужна */
+    overflow-x: hidden;
+    overflow-y: scroll;}
+  
+.card {
+    background-color: #9dcde0;
+  }
+.card_style {
+        border-right-width: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0px;
+}
