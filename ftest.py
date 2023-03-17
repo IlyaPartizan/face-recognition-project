@@ -14,7 +14,8 @@ def index():
         user = users[event[1]-1]
         event = (user[1], user[2], event[2], event[3], '/static/pictures/' + str(user[0]) + '.jpg')
         events[i]=event
-    return render_template('index.html', events=events)
+    stat = get_stat()
+    return render_template('index.html', events=events, stat=stat)
 
 @app.route('/users')
 def get_usrs():
@@ -54,6 +55,16 @@ def reg_exit():
     register_exit(user_id)
     return 'OK'
 
+@app.route('/api/register_unknown')
+def reg_un():
+    register_unknown()
+    return 'OK'
+
+@app.route('/api/reset_unknown')
+def res_un():
+    reset_unknown()
+    return 'OK'
+
 @app.route('/api/delete_event', methods=['POST'])
 def del_event():
     request_data = request.get_json()
@@ -76,6 +87,10 @@ def get_ev():
 @app.route('/api/get_users', methods=['GET'])
 def get_us():
     return get_users()
+
+@app.route('/api/get_stat')
+def get_un():
+    return get_stat()
 
 
 if __name__ == '__main__':

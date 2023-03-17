@@ -12,6 +12,12 @@
     <meta name="generator" content="Nicepage 5.0.7, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Инвалид1"
+}</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Главная">
     <meta property="og:description" content="">
@@ -52,18 +58,15 @@
                       <div class="u-container-style u-tab-active u-tab-pane" id="tab-ac25" role="tabpanel" aria-labelledby="link-tab-ac25">
                         <div class="u-container-layout u-container-layout-3">
                           <div class="u-layout-grid u-list u-list-1">
-                            <div class="card_list">
+                            <div class="u-repeater u-repeater-1">
                               {% for event in events %}
                               <div class="u-border-2 u-border-grey-75 u-container-style u-hover-feature u-list-item u-repeater-item u-list-item-1" data-animation-name="flipIn" data-animation-duration="1000" data-animation-direction="X">
-                                <div class="u-container-layout u-similar-container u-container-layout-4"> <!--Стиль карточки-->
+                                <div class="u-container-layout u-similar-container u-container-layout-4">
                                   <img class="u-image u-image-round u-radius-10 u-image-2" src={{ event[4] }} alt="" data-image-width="522" data-image-height="692">
-                                   <ul class="u-spacing-0 u-text u-text-1"> <!--Стиль списка текста-->
+                                  <ul class="u-spacing-0 u-text u-text-1">
                                     <li>ФИО: {{ event[0] }} {{ event[1] }}</li>
-                                    <li>Статус: Студент</li>
-                                    <li>Корпус/проходная:</li>
                                     <li>Время входа: {{ event[2] }}</li>
                                     <li>Время выхода: {{ event[3] }}</li>
-                                    <li>Время на территории:</li>
                                   </ul>
                                 </div>
                               </div>
@@ -82,30 +85,61 @@
                               </colgroup>
                               <tbody class="u-table-body u-table-body-1">
                                 <tr style="height: 45px;">
-                                  <td class="table_row">Проходная:</td>
-                                  <td class="table_row">Example#</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">Проходная:</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">Example#</td>
                                 </tr>
                                 <tr style="height: 45px;">
-                                  <td class="table_row">Ошибок сканирования:</td>
-                                  <td class="table_row">{{ stat["unknown"] }}</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">Ошибок сканирования:</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">{{ stat["unknown"] }}</td>
                                 </tr>
                                 <tr style="height: 45px;">
-                                  <td class="table_row">Вышло с территории:</td>
-                                  <td class="table_row">null</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">Вышло с территории:</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">null</td>
                                 </tr>
                                 <tr style="height: 45px;">
-                                  <td class="table_row">Зашло на территорию:</td>
-                                  <td class="table_row">null</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">Зашло на территорию:</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">null</td>
                                 </tr>
                                 <tr style="height: 45px;">
-                                  <td class="table_row">Время:</td>
-                                  <td class="table_row">null</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">Время:</td>
+                                  <td class="u-border-1 u-border-grey-30 u-table-cell">null</td>
                                 </tr>
                               </tbody>
                             </table>
                           </div>
                         </div>
                       </div>
+                      <div class="u-container-style u-tab-pane u-tab-pane-3" id="tab-682d" role="tabpanel" aria-labelledby="link-tab-682d">
+                        <div class="u-container-layout u-container-layout-8"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-expanded-width u-layout-horizontal u-list u-list-2">
+                    <div class="u-repeater u-repeater-2">
+                      <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-1" href="#" role="button">
+                        <span aria-hidden="true">
+                          <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                        </span>
+                        <span class="sr-only">
+                          <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+                        </span>
+                      </a>
+                      <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-2" href="#" role="button">
+                        <span aria-hidden="true">
+                          <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                        </span>
+                        <span class="sr-only">
+                          <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -134,7 +168,7 @@ setInterval(getDate, 0); </script>
             <div id="timedisplay"></div>
           </h1>
         </div>
-        <p class="u-text u-text-default u-text-5">Проходных онлайн: 1</p>
+        <p class="u-text u-text-default u-text-5">Проходных онлайн: </p>
         <p class="u-text u-text-default u-text-6">Человек на объектах: </p>
         <p class="u-text u-text-default u-text-7">Нераспознанных лиц: {{ stat["unknown"] }}</p>
       </div>
@@ -145,5 +179,19 @@ setInterval(getDate, 0); </script>
     </section>
     
     
-
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-5906"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Пример текста. Кликните, чтобы выбрать элемент "Текст".</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  
 </body></html>

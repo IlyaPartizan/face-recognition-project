@@ -6,10 +6,8 @@ import cv2
 import os
 
 import json
+from zap2 import reg_unk
 from zap import id_taker
-
-# def name_taker(name):
-#     return name
 
 # find path of xml file containing haarcascade file 
 cascPathface = os.path.dirname(
@@ -68,10 +66,11 @@ while True:
             # name_taker(name)
             
             
-    
         if name != "Unknown":
         # update the list of names
            id_taker(str(name))
+        else:
+            reg_unk()
         names.append(name)
         # loop over the recognized faces
         for ((x, y, w, h), name) in zip(faces, names):

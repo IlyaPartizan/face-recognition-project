@@ -63,3 +63,28 @@ def register_exit(subject_id):
     con.commit()
     con.close()
 
+def register_unknown():
+    current = get_stat()['unknown']
+    con = sqlite3.connect(dbname)
+    cur = con.cursor()
+    cur.execute("UPDATE stat SET amount = ? WHERE type = ?", (current+1, 'unknown'))
+    con.commit()
+    con.close()
+
+def reset_unknown():
+    con = sqlite3.connect(dbname)
+    cur = con.cursor()
+    cur.execute("UPDATE stat SET amount = ? WHERE type = ?", (0, 'unknown'))
+    con.commit()
+    con.close()
+
+def get_stat():
+    con = sqlite3.connect(dbname)
+    cur = con.cursor()
+    cur.execute("SELECT * from stat")
+    result = cur.fetchall()
+    res = {}
+    for i in result:
+        res[i[1]] = i[2]
+    con.close()
+    return res
